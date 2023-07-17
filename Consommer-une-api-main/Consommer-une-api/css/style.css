@@ -8,10 +8,28 @@ h1 {
 }
 
 
+#root {
+	display: flex;
+    flex-wrap: wrap;
+}
+
 .bloc {
 	border: 1px solid #000000;
 	background: #ffffff;
 	width: 200px;
 	margin: 20px;
+	border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+	padding: 10px;
+	box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.75);
 
+}
+
+img {
+	width: 175px;
+	height: 175px;
+	border-radius: 5%;
 }
