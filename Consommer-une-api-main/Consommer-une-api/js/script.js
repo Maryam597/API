@@ -1,23 +1,28 @@
+let root = document.getElementById('root')
 let nb = 12;
-let url = 'https://reqres.in/api/users?per_page=' +nb;
-let html = document.getElementById('root');
+let url = 'https://reqres.in/api/users?per_page=' + nb;
+
+fetch(url) //récupére l'url 
+    .then(response => {     //stocker les données de l'url dans response
+        response.json()  //j.son = tableau 
+        .then(data => { // tableau renommé data 
+            console.log(data.data)
+            data.data.forEach(element => { // boucle foreach
+                // console.log(element); // element =  ce qui se trouve dans la data 
+                root.innerHTML +=`<div> <img src= '${element.avatar}' > 
+                <p> ${element.last_name}</p>
+                <p> ${element.first_name}</p>
+                <p> ${element.email}</p>
 
 
-fetch(url)
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error))
+                </div>` // innerHtml --> écrire du html dans du js
+
+            })
+        })
+    }
+    )
+
+console.log(root);
 
 
-
-
-
-//   .then(function(response) {
-//     if (response.status !== 200) { // si ça c'est mal passé
-//       throw new Error("Le serveur n'a pas répondu correctement");
-//     } else return response.text(); // renvoie une promesse
-//   })
-//   .then(function(data) { // data correspond au retour du résolve (ici deux lignes au dessus)
-//     console.log("Token récupéré : ", data);
-//   })
-
+// headers vérification j.son 
