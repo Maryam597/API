@@ -9,14 +9,12 @@ fetch(url) //récupére l'url
             console.log(data.data)
             data.data.forEach(element => { // boucle foreach
                 // console.log(element); // element =  ce qui se trouve dans la data 
-                root.innerHTML +=`
+                root.innerHTML +=` 
                 <div class='bloc'> 
                 <p> ${element.last_name}</p>
                 <p> ${element.first_name}</p>
-                <img src= '${element.avatar}' > 
+                <img src= '${element.avatar}'> 
                 <p> ${element.email}</p>
-
-
                 </div>` // innerHtml --> écrire du html dans du js
             })
         })
@@ -28,5 +26,3 @@ console.log(root);
 
 
 // headers vérification j.son 
-
-//appendchild
