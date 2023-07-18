@@ -22,8 +22,11 @@ fetch(url) //récupére l'url
         })
     }
     )
+    .catch(error => console.error(error));
 
 console.log(root);
 
 
 // headers vérification j.son 
+
+//appendchild

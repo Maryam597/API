@@ -5,6 +5,7 @@
 }
 h1 {
 	text-align: center;
+	padding: 50px;
 }
 
 
@@ -33,3 +34,7 @@ img {
 	height: 175px;
 	border-radius: 5%;
 }
+
+/* #root p {
+	display: contents;	
+} */
